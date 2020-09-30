@@ -343,6 +343,9 @@ def backupDirectory(sourceId, refSourceId, relativePath, path):
         except PermissionError:
             #XXX Log file path
             continue
+        except FileNotFoundError:
+            #XXX Log file path
+            continue
 
 #
 # Backup Given Directories
